@@ -20,7 +20,7 @@
   --space-10: 160px;
 
   /* Layout */
-  --max-width: 1408px;
+  --max-width: 1200px;
   --prose-width: 680px;
   --page-padding: clamp(24px, 5vw, 72px);
 

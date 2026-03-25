@@ -1,12 +1,59 @@
-.about {
-  padding-top: var(--space-9);
+.bio {
+  padding-top: var(--space-10);
+  padding-bottom: var(--space-10);
 }
 
-.aboutText {
-  max-width: var(--prose-width);
+.bioText {
+  max-width: 900px;
+}
+
+.bioHeading {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-7);
+}
+
+.bioHeading:last-child {
+  margin-bottom: 0;
+}
+
+.bioSection {
+  padding-top: 0;
+}
+
+.bioImage {
+  width: 100%;
+  border-radius: 32px;
+  object-fit: cover;
+  display: block;
+  margin-top: var(--space-9);
+}
+
+.bioBlock {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: var(--space-8);
+}
+
+.bioLabel {
+  font-family: var(--font-heading);
   font-size: var(--text-md);
-  line-height: 1.6;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: var(--space-7);
+}
+
+.bioContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  font-size: var(--text-base);
+  line-height: 1.7;
   color: var(--color-muted);
+  max-width: 600px;
 }
 
 .sectionHeading {
@@ -21,12 +68,80 @@
   margin-bottom: var(--space-8);
 }
 
-.discography {
+.discRow {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: var(--space-8);
+  padding: var(--space-9) 0;
+  border-top: 1px solid var(--color-border);
+  align-items: start;
+}
+
+.discRow:first-of-type {
+  border-top: none;
+}
+
+.discLabel {
+  font-family: var(--font-heading);
+  font-size: var(--text-md);
+  font-weight: 700;
+  letter-spacing: 0.02em;
   display: flex;
   flex-direction: column;
+  gap: var(--space-2);
+}
+
+.discYear {
+  font-size: var(--text-base);
+  font-weight: 400;
+  color: var(--color-muted);
+  line-height: 1.7;
+  letter-spacing: 0;
+}
+
+.discSection {
+  padding-bottom: 80px;
+}
+
+.collabSection {
+  padding-top: 80px;
+}
+
+.divider {
+  border-top: 1px solid var(--color-border);
+}
+
+.discEmbed {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.embed {
+  margin: var(--space-5) 0;
+}
+
+.videoWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .collabs {
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 809px) {
+  .bioBlock {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+
+  .discRow {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
 }

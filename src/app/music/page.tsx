@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Hero from "@/components/ui/Hero";
+import PageHero from "@/components/ui/PageHero";
 import Section from "@/components/layout/Section";
 import DiscographyItem from "@/components/ui/DiscographyItem";
 import CollabCard from "@/components/ui/CollabCard";
@@ -9,76 +9,156 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: "Music",
   description:
-    "For as long as I can remember, I've been playing music. Breach & Bellow, collaborations, and more.",
+    "For as long as I can remember, I've been playing music. Breach and Bellow, collaborations, and more.",
 };
 
 export default function MusicPage() {
   return (
     <>
-      <Hero
-        headline="Music"
-        subhead="For as long as I can remember, I've been playing music."
-        imageSrc=""
-        imageAlt="Music portrait"
+      <PageHero
+        headline="Music has always been the throughline."
+        imageSrc="/images/jesse-spencer-breach-bellow-portrait-black-and-white-photo.jpg"
+        imageAlt="Jesse Spencer — Breach and Bellow"
       />
 
-      <Section theme="light" className={styles.about}>
-        <div className={styles.aboutText}>
-          <p>
-            Music has been a constant thread through my life. I&rsquo;ve toured
-            with Matt Hires, played in bands across the country, and
-            spent years writing and recording my own songs. My current
-            project is Breach &amp; Bellow — a personal songwriting journey
-            that blends indie rock, folk, and ambient textures.
-          </p>
+      <Section theme="light" className={styles.bio}>
+        <div className={styles.bioText}>
+          <h2 className={styles.bioHeading}>
+            As a drummer, I&rsquo;ve toured with Atlantic Records artist Matt Hires,
+            supporting Matchbox Twenty, the Goo Goo Dolls, and Parachute.
+          </h2>
+          <h2 className={styles.bioHeading}>
+            I&rsquo;ve performed on VH1 and AXS TV, played radio stations
+            across the U.S., and shared stages with Copeland, Lifehouse, Mat
+            Kearney, and others.
+          </h2>
+          <h2 className={styles.bioHeading}>
+            Now I write, record, and produce under Breach and
+            Bellow&mdash;ambitious, vulnerable songs that blend acoustic folk,
+            cinematic soundscapes, and intimate lyricism.
+          </h2>
         </div>
+        <img
+          src="/images/jesse-spencer-breach-and-bellow-0027.jpg"
+          alt="Jesse Spencer — Breach and Bellow"
+          className={styles.bioImage}
+        />
       </Section>
 
-      <Section theme="light">
-        <h2 className={styles.sectionHeading}>Breach &amp; Bellow</h2>
+      <Section theme="dark" className={styles.discSection}>
+        <h2 className={styles.sectionHeading}>Breach and Bellow</h2>
         <p className={styles.sectionSubhead}>
-          My personal songwriting journey.
+          My personal songwriting project.
         </p>
-        <div className={styles.discography}>
-          <DiscographyItem
-            title="All I Have"
-            type="EP"
-            year={2018}
-            note="Includes a music video"
-          />
-          <DiscographyItem
-            title="Burn the Effigy"
-            type="Album"
-            year={2015}
-            credits={[
-              "Produced, written, and performed by Jesse Spencer",
-              "Mixed and mastered at Sun Room Audio",
-            ]}
-          />
-          <DiscographyItem
-            title="Brand New Day"
-            type="EP"
-            year={2012}
-          />
+        <div className={styles.discRow}>
+          <div className={styles.discLabel}>All I Have<span className={styles.discYear}>2018</span></div>
+          <div className={styles.discEmbed}>
+            <div className={styles.videoWrap}>
+              <iframe
+                src="https://www.youtube.com/embed/ci1KYQNrNZw"
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                loading="lazy"
+              />
+            </div>
+          </div>
         </div>
+        <div className={styles.discRow}>
+          <div className={styles.discLabel}>Burn the Effigy<span className={styles.discYear}>2015</span></div>
+          <div className={styles.discEmbed}>
+            <div className={styles.videoWrap}>
+              <iframe
+                src="https://www.youtube.com/embed/7CYnTYA1LfE"
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                loading="lazy"
+              />
+            </div>
+            <div className={styles.videoWrap}>
+              <iframe
+                src="https://www.youtube.com/embed/06KaXdmqqR8"
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                loading="lazy"
+              />
+            </div>
+            <iframe
+              style={{ borderRadius: 12 }}
+              src="https://open.spotify.com/embed/album/6kRXjCJl8vooYXgsFO6dBl?utm_source=generator"
+              width="100%"
+              height="352"
+              frameBorder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        <div className={styles.divider} />
       </Section>
 
-      <Section theme="light">
+      <Section theme="dark" className={styles.collabSection}>
         <h2 className={styles.sectionHeading}>Collaborations</h2>
         <p className={styles.sectionSubhead}>
           These are some projects I&rsquo;ve enjoyed the most.
         </p>
-        <div className={styles.collabs}>
-          <CollabCard
-            name="Leash of Foxes"
-            description="Intricate melodies. Hard hitting drums."
-            role="Drums"
-          />
-          <CollabCard
-            name="The Wild After"
-            description="Catchy indie folk rock."
-            role="Drums"
-          />
+        <div className={styles.discRow}>
+          <div className={styles.discLabel}>Leash of Foxes<span className={styles.discYear}>2015</span></div>
+          <div className={styles.discEmbed}>
+            <div className={styles.videoWrap}>
+              <iframe
+                src="https://www.youtube.com/embed/iEhUyIk2l5I"
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                loading="lazy"
+              />
+            </div>
+            <iframe
+              style={{ borderRadius: 12 }}
+              src="https://open.spotify.com/embed/album/6xCgLVt2zFAng7ODnTrMmM?utm_source=generator&theme=0"
+              width="100%"
+              height="352"
+              frameBorder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        <div className={styles.discRow}>
+          <div className={styles.discLabel}>The Wild After<span className={styles.discYear}>2020</span></div>
+          <div className={styles.discEmbed}>
+            <div className={styles.videoWrap}>
+              <iframe
+                src="https://www.youtube.com/embed/6bneuJe2P5E"
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                loading="lazy"
+              />
+            </div>
+            <iframe
+              style={{ borderRadius: 12 }}
+              src="https://open.spotify.com/embed/album/6XLcIQWNqxQIrXzh6X68AZ?utm_source=generator&theme=0"
+              width="100%"
+              height="352"
+              frameBorder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            />
+          </div>
         </div>
       </Section>
 

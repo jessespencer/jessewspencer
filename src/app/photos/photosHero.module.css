@@ -1,0 +1,27 @@
+.hero {
+  background: var(--color-bg);
+  color: var(--color-text);
+  padding-top: var(--space-10);
+  padding-bottom: var(--space-10);
+}
+
+.imageWrap {
+  max-width: calc(var(--max-width) + var(--page-padding) * 2);
+  margin: 0 auto var(--space-9);
+  padding: 0 var(--page-padding);
+}
+
+.image {
+  width: 100%;
+  height: 300px;
+  display: block;
+  object-fit: cover;
+  border-radius: 32px;
+}
+
+.headline {
+  font-size: var(--text-display);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}

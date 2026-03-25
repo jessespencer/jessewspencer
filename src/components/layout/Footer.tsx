@@ -2,6 +2,10 @@
 
 import { motion } from "framer-motion";
 import { fadeUp, staggerChildren, viewportConfig } from "@/lib/animations";
+import GithubIcon from "@/components/icons/GithubIcon";
+import LinkedInIcon from "@/components/icons/LinkedInIcon";
+import InstagramIcon from "@/components/icons/InstagramIcon";
+import YoutubeIcon from "@/components/icons/YoutubeIcon";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -19,12 +23,6 @@ export default function Footer() {
           <motion.h2 className={styles.heading} variants={fadeUp}>
             Let&rsquo;s connect.
           </motion.h2>
-          <motion.div className={styles.socials} variants={fadeUp}>
-            <a href="https://github.com/jessespencer" target="_blank" rel="noopener noreferrer">Github</a>
-            <a href="https://linkedin.com/in/jessewspencer" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://instagram.com/jessewspencer" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="https://youtube.com/@jessewspencer" target="_blank" rel="noopener noreferrer">Youtube</a>
-          </motion.div>
         </div>
         <div className={styles.divider} />
         <motion.div className={styles.bottom} variants={fadeUp}>
@@ -36,6 +34,12 @@ export default function Footer() {
             >
               jessespencerw@gmail.com
             </a>
+          </div>
+          <div className={styles.socials}>
+            <a href="https://github.com/jessespencer" target="_blank" rel="noopener noreferrer" aria-label="Github"><GithubIcon /></a>
+            <a href="https://youtube.com/@jessewspencer" target="_blank" rel="noopener noreferrer" aria-label="Youtube"><YoutubeIcon /></a>
+            <a href="https://instagram.com/jessewspencer" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><InstagramIcon /></a>
+            <a href="https://linkedin.com/in/jessewspencer" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><LinkedInIcon /></a>
           </div>
           <div className={styles.right}>
             <p className={styles.copyright}>&copy; {new Date().getFullYear()} Jesse Spencer</p>

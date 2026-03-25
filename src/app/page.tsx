@@ -6,13 +6,14 @@ import Footer from "@/components/layout/Footer";
 import DayforceLogo from "@/components/icons/DayforceLogo";
 import WorkdayLogo from "@/components/icons/WorkdayLogo";
 import DeloitteLogo from "@/components/icons/DeloitteLogo";
+import GridCraftLogo from "@/components/icons/GridCraftLogo";
 import styles from "./page.module.css";
 
 export default function HomePage() {
   return (
     <>
       <Hero
-        headline="I design the systems that shape products."
+        headline="I design, build products, and write music."
         imageSrc="/images/portrait.jpg"
         imageAlt="Jesse Spencer portrait"
       />
@@ -73,6 +74,7 @@ export default function HomePage() {
             },
             {
               company: "GridCraft",
+              logo: <GridCraftLogo style={{ height: 24 }} />,
               title: "Product Designer",
               years: "2013\u20132015",
               description:

@@ -27,7 +27,7 @@
 }
 
 .headline {
-  font-size: var(--text-display);
+  font-size: 112px;
   font-weight: 700;
   line-height: 1;
   letter-spacing: -0.03em;
@@ -45,7 +45,7 @@
 .imageWrap {
   flex-shrink: 0;
   width: clamp(200px, 30vw, 400px);
-  border-radius: 48px;
+  border-radius: 32px;
   overflow: hidden;
 }
 

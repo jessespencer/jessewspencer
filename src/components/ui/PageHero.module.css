@@ -1,0 +1,76 @@
+.hero {
+  background: var(--color-bg);
+  color: var(--color-text);
+  padding-top: var(--space-10);
+  padding-bottom: var(--space-9);
+}
+
+.imageWrap {
+  max-width: calc(var(--max-width) + var(--page-padding) * 2);
+  margin: 0 auto var(--space-9);
+  padding: 0 var(--page-padding);
+}
+
+.image {
+  width: 100%;
+  height: 300px;
+  display: block;
+  object-fit: cover;
+  border-radius: 32px;
+}
+
+.headline {
+  font-size: 112px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.arrowWrap {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: var(--space-9);
+  color: var(--color-muted);
+}
+
+.arrow {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.trackDown,
+.trackUp {
+  display: flex;
+  flex-direction: column;
+}
+
+.trackDown {
+  transform: translateY(-50%);
+  animation: pushDown 0.5s var(--ease) forwards;
+}
+
+.trackUp {
+  animation: pushUp 0.5s var(--ease) forwards;
+}
+
+@keyframes pushDown {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes pushUp {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}

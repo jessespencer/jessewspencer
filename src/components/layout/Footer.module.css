@@ -1,0 +1,131 @@
+.footer {
+  background: var(--color-bg);
+  color: var(--color-text);
+  padding: 0;
+  position: relative;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/images/jesse-w-spencer-workshop-design-leader.jpg") center / cover no-repeat;
+  border-radius: 72px 72px 0 0;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.rule {
+  height: 1px;
+  background: var(--color-border);
+  width: 100%;
+}
+
+.wrap {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.socials {
+  display: flex;
+  gap: var(--space-6);
+  margin-top: var(--space-6);
+}
+
+.socials a {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-muted);
+  transition: color 0.3s var(--ease);
+}
+
+.socials a:hover {
+  color: var(--color-text);
+}
+
+.heading {
+  font-size: var(--text-display);
+  font-weight: 700;
+  text-align: center;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.divider {
+  height: 1px;
+  background: var(--color-border);
+  width: 100%;
+}
+
+.bottom {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: var(--space-6) 0 var(--space-7);
+}
+
+.label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+}
+
+.emailLink {
+  font-size: var(--text-md);
+  font-weight: 500;
+  color: var(--color-muted);
+  transition: color 0.3s var(--ease);
+}
+
+.emailLink:hover {
+  color: var(--color-text);
+}
+
+.right {
+  text-align: right;
+}
+
+.copyright {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+}
+
+.backToTop {
+  font-size: var(--text-md);
+  font-weight: 500;
+  color: var(--color-muted);
+  transition: color 0.3s var(--ease);
+}
+
+.backToTop:hover {
+  color: var(--color-text);
+}
+
+@media (max-width: 809px) {
+  .bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-6);
+  }
+
+  .email {
+    text-align: center;
+  }
+
+  .right {
+    text-align: center;
+  }
+}

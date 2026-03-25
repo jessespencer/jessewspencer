@@ -1,0 +1,64 @@
+.hero {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  padding-top: var(--space-10);
+}
+
+.title {
+  font-size: var(--text-display);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-5);
+}
+
+.subtitle {
+  font-size: var(--text-md);
+  color: var(--color-muted);
+}
+
+.heroImage {
+  padding-top: 0;
+}
+
+.meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--space-7);
+}
+
+.metaCol p {
+  font-size: var(--text-base);
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+.metaLabel {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  margin-bottom: var(--space-4);
+}
+
+.disciplines {
+  list-style: none;
+}
+
+.disciplines li {
+  font-size: var(--text-base);
+  color: var(--color-muted);
+  line-height: 1.8;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-7);
+}
+
+@media (max-width: 809px) {
+  .meta {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+}

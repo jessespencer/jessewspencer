@@ -1,0 +1,25 @@
+.section {
+  margin-bottom: var(--space-9);
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.label {
+  font-size: var(--text-md);
+  font-weight: 600;
+  margin-bottom: var(--space-6);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-5);
+}
+
+@media (max-width: 809px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

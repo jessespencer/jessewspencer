@@ -1,0 +1,28 @@
+.card {
+  display: block;
+}
+
+.link {
+  display: block;
+}
+
+.image {
+  margin-bottom: var(--space-5);
+}
+
+.title {
+  font-size: var(--text-md);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-2);
+}
+
+.description {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+.link:hover .title {
+  color: var(--color-accent);
+  transition: color 0.3s var(--ease);
+}

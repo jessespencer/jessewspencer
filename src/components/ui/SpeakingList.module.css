@@ -1,0 +1,35 @@
+.label {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-muted);
+  margin-bottom: var(--space-6);
+}
+
+.item {
+  margin-bottom: var(--space-5);
+}
+
+.title {
+  font-size: var(--text-md);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.venue {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  margin-top: var(--space-1);
+}
+
+.cvLink {
+  display: inline-block;
+  margin-top: var(--space-6);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-muted);
+  transition: color 0.3s var(--ease);
+}
+
+.cvLink:hover {
+  color: var(--color-text);
+}

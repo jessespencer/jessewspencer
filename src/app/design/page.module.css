@@ -1,0 +1,35 @@
+.sectionHeading {
+  font-size: var(--text-md);
+  font-weight: 600;
+  color: var(--color-muted);
+  margin-bottom: var(--space-7);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-7);
+}
+
+.archiveCta {
+  padding-top: var(--space-7);
+  padding-bottom: var(--space-9);
+  text-align: center;
+}
+
+.archiveLink {
+  font-size: var(--text-md);
+  font-weight: 500;
+  color: var(--color-muted);
+  transition: color 0.3s var(--ease);
+}
+
+.archiveLink:hover {
+  color: var(--color-text);
+}
+
+@media (max-width: 809px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

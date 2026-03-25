@@ -1,0 +1,39 @@
+.bio {
+  padding-top: var(--space-10);
+  padding-bottom: var(--space-10);
+}
+
+.bioText {
+  max-width: 900px;
+}
+
+.bioHeading {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-7);
+}
+
+.bioHeading:last-child {
+  margin-bottom: 0;
+}
+
+.bioLink {
+  color: var(--color-muted);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  transition: color 0.3s var(--ease);
+}
+
+.bioLink:hover {
+  color: var(--color-text);
+}
+
+.darkSection {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+

@@ -1,0 +1,25 @@
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+.reverse {
+  direction: rtl;
+}
+
+.reverse .col {
+  direction: ltr;
+}
+
+@media (max-width: 809px) {
+  .split {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .reverse {
+    direction: ltr;
+  }
+}

@@ -1,0 +1,32 @@
+.about {
+  padding-top: var(--space-9);
+}
+
+.aboutText {
+  max-width: var(--prose-width);
+  font-size: var(--text-md);
+  line-height: 1.6;
+  color: var(--color-muted);
+}
+
+.sectionHeading {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  margin-bottom: var(--space-3);
+}
+
+.sectionSubhead {
+  font-size: var(--text-base);
+  color: var(--color-muted);
+  margin-bottom: var(--space-8);
+}
+
+.discography {
+  display: flex;
+  flex-direction: column;
+}
+
+.collabs {
+  display: flex;
+  flex-direction: column;
+}

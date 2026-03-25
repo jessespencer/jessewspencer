@@ -1,0 +1,24 @@
+.label {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-muted);
+  margin-bottom: var(--space-6);
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  display: inline;
+}
+
+.separator {
+  color: var(--color-muted);
+}

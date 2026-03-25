@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/ui/PageHero";
+import StickyNav from "@/components/ui/StickyNav";
 import Section from "@/components/layout/Section";
 import DiscographyItem from "@/components/ui/DiscographyItem";
 import CollabCard from "@/components/ui/CollabCard";
@@ -21,7 +22,15 @@ export default function MusicPage() {
         imageAlt="Jesse Spencer — Breach and Bellow"
       />
 
-      <Section theme="light" className={styles.bio}>
+      <StickyNav
+        links={[
+          { label: "Bio", href: "#bio" },
+          { label: "Breach and Bellow", href: "#breach-and-bellow" },
+          { label: "Collaborations", href: "#collaborations" },
+        ]}
+      />
+
+      <Section theme="light" className={styles.bio} id="bio">
         <div className={styles.bioText}>
           <h2 className={styles.bioHeading}>
             As a drummer, I&rsquo;ve toured with Atlantic Records artist Matt Hires,
@@ -45,7 +54,7 @@ export default function MusicPage() {
         />
       </Section>
 
-      <Section theme="dark" className={styles.discSection}>
+      <Section theme="dark" className={styles.discSection} id="breach-and-bellow">
         <h2 className={styles.sectionHeading}>Breach and Bellow</h2>
         <p className={styles.sectionSubhead}>
           My personal songwriting project.
@@ -105,7 +114,7 @@ export default function MusicPage() {
         <div className={styles.divider} />
       </Section>
 
-      <Section theme="dark" className={styles.collabSection}>
+      <Section theme="dark" className={styles.collabSection} id="collaborations">
         <h2 className={styles.sectionHeading}>Collaborations</h2>
         <p className={styles.sectionSubhead}>
           These are some projects I&rsquo;ve enjoyed the most.

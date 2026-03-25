@@ -3,9 +3,15 @@
   padding: var(--space-7) var(--page-padding);
   display: flex;
   flex-direction: column;
-  gap: var(--space-5);
+  gap: var(--space-10);
   max-width: calc(var(--max-width) + var(--page-padding) * 2);
   margin: 0 auto;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
 }
 
 .fullRow {

@@ -1,4 +1,5 @@
 import Hero from "@/components/ui/Hero";
+import StickyNav from "@/components/ui/StickyNav";
 import Section from "@/components/layout/Section";
 import ExperienceCards from "@/components/ui/ExperienceCard";
 import DarkBlock from "@/components/ui/DarkBlock";
@@ -18,7 +19,17 @@ export default function HomePage() {
         imageAlt="Jesse Spencer portrait"
       />
 
-      <Section theme="light" className={styles.bio}>
+      <StickyNav
+        links={[
+          { label: "About", href: "#about" },
+          { label: "Experience", href: "#experience" },
+          { label: "Expertise", href: "#expertise" },
+          { label: "Awards", href: "#awards" },
+          { label: "Speaking", href: "#speaking" },
+        ]}
+      />
+
+      <Section theme="light" className={styles.bio} id="about">
         <div className={styles.bioText}>
           <h2 className={styles.bioHeading}>
             I&rsquo;ve spent the past 15+ years{" "}
@@ -54,6 +65,7 @@ export default function HomePage() {
             scalable, unified experiences.
           </h2>
         </div>
+        <div id="experience">
         <ExperienceCards
           items={[
             {
@@ -90,10 +102,12 @@ export default function HomePage() {
             },
           ]}
         />
+        </div>
       </Section>
 
       <Section theme="dark" className={styles.darkSection}>
         <DarkBlock
+          id="expertise"
           label="Expertise"
           headlines={[
             "Art Direction",
@@ -104,6 +118,7 @@ export default function HomePage() {
           ]}
         />
         <DarkBlock
+          id="awards"
           label="Awards"
           headlines={[
             "US Patent",
@@ -114,6 +129,7 @@ export default function HomePage() {
           body={"United States Patent holder for a touch screen interaction pattern at Gridcraft. Every Body Walk! earned Apple\u2019s New and Noteworthy, Yahoo!\u2019s App of the Week, and AppAdvice\u2019s Today\u2019s Best Apps."}
         />
         <DarkBlock
+          id="speaking"
           label="Speaking"
           headlines={[
             "Zapier",

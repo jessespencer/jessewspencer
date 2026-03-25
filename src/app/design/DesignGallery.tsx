@@ -16,58 +16,98 @@ const colors = [
   "#4a1942",
 ];
 
-const rows = Array.from({ length: 8 }, (_, i) => ({
-  layout: i % 2 === 0 ? ("full" as const) : ("two-col" as const),
-  colors: [colors[i % colors.length], colors[(i + 3) % colors.length]],
-}));
+interface GallerySection {
+  id: string;
+  title: string;
+  rows: Array<{
+    layout: "full" | "two-col";
+    colors: string[];
+  }>;
+}
+
+const sections: GallerySection[] = [
+  {
+    id: "selected-works",
+    title: "Product Design",
+    rows: Array.from({ length: 8 }, (_, i) => ({
+      layout: i % 2 === 0 ? ("full" as const) : ("two-col" as const),
+      colors: [colors[i % colors.length], colors[(i + 3) % colors.length]],
+    })),
+  },
+  {
+    id: "branding",
+    title: "Branding",
+    rows: Array.from({ length: 6 }, (_, i) => ({
+      layout: i % 2 === 0 ? ("full" as const) : ("two-col" as const),
+      colors: [colors[(i + 2) % colors.length], colors[(i + 5) % colors.length]],
+    })),
+  },
+  {
+    id: "graphic-design",
+    title: "Graphic Design",
+    rows: Array.from({ length: 6 }, (_, i) => ({
+      layout: i % 2 === 0 ? ("full" as const) : ("two-col" as const),
+      colors: [colors[(i + 4) % colors.length], colors[(i + 1) % colors.length]],
+    })),
+  },
+];
 
 export default function DesignGallery() {
   return (
     <div className={styles.gallery} data-theme="dark">
-      <motion.p
-        className={darkBlockStyles.label}
-        initial="hidden"
-        whileInView="visible"
-        viewport={viewportConfig}
-        variants={fadeUp}
-      >
-        Selected works
-      </motion.p>
-      {rows.map((row, i) =>
-        row.layout === "full" ? (
-          <motion.div
-            key={i}
-            className={styles.fullRow}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewportConfig}
+      {sections.map((section) => (
+        <motion.div
+          key={section.id}
+          className={styles.section}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportConfig}
+          variants={staggerChildren}
+        >
+          <motion.p
+            id={section.id}
+            className={darkBlockStyles.label}
             variants={fadeUp}
           >
-            <div
-              className={styles.placeholder}
-              style={{ background: row.colors[0] }}
-            />
-          </motion.div>
-        ) : (
-          <div key={i} className={styles.twoColRow}>
-            {row.colors.map((color, j) => (
+            {section.title}
+          </motion.p>
+          {section.rows.map((row, i) =>
+            row.layout === "full" ? (
               <motion.div
-                key={j}
-                className={styles.colItem}
+                key={i}
+                className={styles.fullRow}
                 initial="hidden"
                 whileInView="visible"
                 viewport={viewportConfig}
-                variants={scaleIn}
+                variants={fadeUp}
               >
                 <div
                   className={styles.placeholder}
-                  style={{ background: color }}
+                  style={{ background: row.colors[0] }}
                 />
               </motion.div>
-            ))}
-          </div>
-        )
-      )}
+            ) : (
+              <div key={i} className={styles.twoColRow}>
+                {row.colors.map((color, j) => (
+                  <motion.div
+                    key={j}
+                    className={styles.colItem}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={viewportConfig}
+                    variants={scaleIn}
+                  >
+                    <div
+                      className={styles.placeholder}
+                      style={{ background: color }}
+                    />
+                  </motion.div>
+                ))}
+              </div>
+            )
+          )}
+        </motion.div>
+      ))}
     </div>
   );
 }

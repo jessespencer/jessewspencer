@@ -8,6 +8,7 @@ interface DarkBlockProps {
   label: string;
   headlines: string[];
   body?: string;
+  id?: string;
   link?: {
     href: string;
     label: string;
@@ -18,11 +19,13 @@ export default function DarkBlock({
   label,
   headlines,
   body,
+  id,
   link,
 }: DarkBlockProps) {
   return (
     <motion.div
       className={styles.block}
+      id={id}
       initial="hidden"
       whileInView="visible"
       viewport={viewportConfig}

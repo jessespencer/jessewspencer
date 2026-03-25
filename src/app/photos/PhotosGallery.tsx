@@ -72,6 +72,7 @@ export default function PhotosGallery() {
       {sections.map((section, si) => (
         <motion.div
           key={si}
+          id={section.title.toLowerCase().replace(/\s+/g, "-")}
           className={styles.section}
           initial="hidden"
           whileInView="visible"

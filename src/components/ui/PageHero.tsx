@@ -50,6 +50,9 @@ export default function PageHero({ headline, imageSrc, imageAlt }: PageHeroProps
         <motion.div className={styles.arrowWrap} variants={fadeUp}>
           <span
             className={styles.arrow}
+            onClick={() => {
+              window.scrollBy({ top: window.innerHeight, behavior: "smooth" });
+            }}
             onMouseEnter={() => {
               setDirection("enter");
               setAnimKey((k) => k + 1);

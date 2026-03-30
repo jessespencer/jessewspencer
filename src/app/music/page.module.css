@@ -29,6 +29,7 @@
   height: 300px;
   border-radius: 32px;
   object-fit: cover;
+  object-position: center 70%;
   display: block;
   margin-top: var(--space-9);
 }

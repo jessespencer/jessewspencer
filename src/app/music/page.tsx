@@ -18,8 +18,8 @@ export default function MusicPage() {
     <>
       <PageHero
         headline="Music has always been the throughline."
-        imageSrc="/images/jesse-spencer-breach-bellow-portrait-black-and-white-photo.jpg"
-        imageAlt="Jesse Spencer — Breach and Bellow"
+        imageSrc="/images/jesse-spencer-breach-bellow-portrait-light-wall-guitar-photo.jpg"
+        imageAlt="Jesse Spencer playing guitar with warm stage lights — Breach and Bellow"
       />
 
       <StickyNav
@@ -48,7 +48,7 @@ export default function MusicPage() {
           </h2>
         </div>
         <img
-          src="/images/jesse-spencer-breach-and-bellow-0027.jpg"
+          src="/images/jesse-spencer-breach-and-bellow-portrait-greenery.jpg"
           alt="Jesse Spencer — Breach and Bellow"
           className={styles.bioImage}
         />

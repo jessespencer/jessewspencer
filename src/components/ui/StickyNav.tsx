@@ -30,11 +30,20 @@ export default function StickyNav({ links }: StickyNavProps) {
       aria-hidden={!visible}
     >
       <div className={styles.pill}>
+        <button
+          className={styles.link}
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          Back to top
+        </button>
         {links.map((link) => (
           <a key={link.href} href={link.href} className={styles.link}>
             {link.label}
           </a>
         ))}
+        <a href="#footer" className={styles.link}>
+          Contact
+        </a>
       </div>
     </nav>
   );

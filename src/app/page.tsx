@@ -14,9 +14,10 @@ export default function HomePage() {
   return (
     <>
       <Hero
-        headline="I design, build products, and write music."
-        imageSrc="/images/portrait.jpg"
+        headline="Building, designing and making music."
+        imageSrc="/images/jesse-spencer-breach-bellow-portrait-black-and-white-photo.jpg"
         imageAlt="Jesse Spencer portrait"
+        showArrow
       />
 
       <StickyNav

@@ -11,6 +11,7 @@ import styles from "./Footer.module.css";
 export default function Footer() {
   return (
     <motion.footer
+      id="footer"
       className={styles.footer}
       data-theme="dark"
       initial="hidden"

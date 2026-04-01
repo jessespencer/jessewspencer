@@ -49,6 +49,55 @@
   overflow: hidden;
 }
 
+.arrowWrap {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: var(--space-9);
+  color: var(--color-muted);
+}
+
+.arrow {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.trackDown,
+.trackUp {
+  display: flex;
+  flex-direction: column;
+}
+
+.trackDown {
+  transform: translateY(-50%);
+  animation: pushDown 0.5s var(--ease) forwards;
+}
+
+.trackUp {
+  animation: pushUp 0.5s var(--ease) forwards;
+}
+
+@keyframes pushDown {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes pushUp {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
 @media (max-width: 809px) {
   .inner {
     height: 100vh;
